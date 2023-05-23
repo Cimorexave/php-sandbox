@@ -1,2 +1,2 @@
-<?php 
-echo "Congrats, you clicked a button";
+<?php
+echo "Congrats {$_REQUEST["yourname"]}, you clicked a button!";
