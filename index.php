@@ -14,6 +14,7 @@
     ?>
     <form action="form.php">
         <button>Submit</button>
+        <input type="text" name="yourname">
     </form>
 
     <style>
