@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 
@@ -28,10 +29,11 @@
                         if (empty($username) || empty($password)) {
                             echo "Username or Password Missing!";
                         } else {
-                            setcookie("username", $username, time() + 3600, "/");
-                            setcookie("password", $password, time() + 3600, "/");
+                            $_SESSION["username"] = $username;
+                            $_SESSION["password"] = $password;
+                            // setcookie("username", $username, time() + 3600, "/");
+                            // setcookie("password", $password, time() + 3600, "/");
                             header("Location: ./index.php");
-                            echo "Successfull Logging";
                         }
                     }
                     ?>
