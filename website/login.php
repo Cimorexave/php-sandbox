@@ -27,7 +27,12 @@
                         $password = $_POST["password"];
                         if (empty($username) || empty($password)) {
                             echo "Username or Password Missing!";
-                        } else echo "Successfull Logging";
+                        } else {
+                            setcookie("username", $username, time() + 3600, "/");
+                            setcookie("password", $password, time() + 3600, "/");
+                            header("Location: ./index.php");
+                            echo "Successfull Logging";
+                        }
                     }
                     ?>
                 </span>
