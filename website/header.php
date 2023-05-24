@@ -1,5 +1,8 @@
 <header>
-    <span>Welcome!</span>
+    <?php
+    $username = $_SESSION["username"];
+    echo "<span>Welcome, $username </span>"
+    ?>
     <nav>
         <a href="index.php"> Home </a>
         <a href="contact.php"> Contact Us </a>
